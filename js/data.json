@@ -1,0 +1,122 @@
+[
+  {
+    "title": "7 nguyên tắc Kiểm Thử theo ISTQB",
+    "body": [
+      "Trong kiểm thử phần mềm có 7 nguyên tắc kiểm thử. Những nguyên tắc chính là những quy định hoặc là luật mà chúng ta phải tuân theo. Rất nhiều người làm việc lâu năm trong lĩnh vực kiểm thử phần mềm nhưng vẫn không biết đến những nguyên tắc quan trọng này, và họ đã tốn rất nhiều thời gian, công sức truy lùng bug ẩn.",
+      "1st Principle: Testing Shows Defects Are Present In The Software (Kiểm thử đưa ra lỗi)",
+      "-Kiểm thử có thể cho thấy rằng phần mềm đang có lỗi, nhưng không thể chứng minh rằng phần mềm không có lỗi. Kiểm thử được thực hiện bằng những kĩ thuật khác nhau. Kiểm thử làm giảm xác suất lỗi chưa tìm thấy vẫn còn trong phần mềm, ngay cả khi đã kiểm thử nghiêm ngặt phần mềm vẫn có thể còn lỗi. Vì vậy chúng ta phải tìm được càng nhiều lỗi càng tốt.",
+      "2nd Principle: Exhaustive Testing Is Not Practically Possible (Kiểm thử toàn bộ là không thể)",
+      "-Nguyên tắc này nói rằng kiểm tra mọi thứ trong phần mềm một cách trọn vẹn là không thể. Trừ khi sản phẩm được kiểm thử quá đơn giản cũng như không có nhiều giá trị đầu vào (chẳng hạn như “Hello World”) thì việc chứng minh sản phẩm không còn bug cho dù có kiểm thử nhiều đến đâu là không khả thi.",
+      "3rd Principle: Start Testing In Early Stage of SDLC (Kiểm thử càng sớm càng tốt)",
+      "-Nguyên tắc này yêu cầu bắt đầu thử nghiệm phần mềm trong giai đoạn đầu của vòng đời phát triển phần mềm. Các hoạt động kiểm thử phần mềm từ giai đoạn đầu sẽ giúp phát hiện bug sớm hơn. Nó cho phép chuyển giao phần mềm theo yêu cầu đúng thời gian với chất lượng dự kiến.",
+      "Ngoài ra ai làm phần mềm cũng biết được rằng việc phát hiện lỗi càng trễ bao nhiêu thì chi phí để sửa lỗi càng cao bấy nhiêu.",
+      "4th Principle: Defects Clustering (Lỗi thường được phân bố tập trung)",
+      "-Thông thường, lỗi tập trung vào những module, thành phần chức năng chính của hệ thống. Nếu xác định được điều này bạn sẽ tập trung vào tìm kiếm lỗi quanh khu vực được xác định. Nó được coi là một trong những cách hiệu quả nhất để thực hiện kiểm tra hiệu quả. Điều này cũng thuận theo nguyên lý Pareto: 80% số lượng lỗi được tìm thấy trong 20% tính năng của hệ thống.",
+      "5th Principle: The Pesticide Paradox (Nghịch lý thuốc trừ sâu)",
+      "-Việc sử dụng lặp đi lặp lại cùng một loại thuốc trừ sâu để diệt côn trùng sẽ theo thời gian dẫn đến việc côn trùng phát triển tính kháng thuốc trừ sâu. Do đó, dùng thuốc trừ sâu để tiêu diệt côn trùng sẽ không còn hiệu quả. Áp dụng tương tự trong kiểm thử phần mềm. Nếu một bộ test cases được thực hiện lặp đi lặp lại nhiều lần sẽ không còn ý nghĩa trong việc phát hiện ra các lỗi mới",
+      "6th Principle: Testing is dependent on context (Kiểm thử phụ thuộc vào ngữ cảnh)",
+      "-Kiểm thử phụ thuộc vào ngữ cảnh, về cơ bản có nghĩa là cách bạn kiểm tra trang web thương mại điện tử sẽ khác với cách bạn kiểm tra quảng cáo ngoài ứng dụng. Tất cả các phần mềm được phát triển không giống nhau. Bạn có thể sử dụng một cách tiếp cận, phương pháp, kỹ thuật và loại kiểm thử khác nhau tùy thuộc vào loại ứng dụng. ",
+      "Corrupti voluptates asperiores ratione laudantium, eveniet molestiae possimus deleniti officia, incidunt quae et. Amet, ducimus eum ipsa reprehenderit ad, et nihil, veritatis ea doloremque ab placeat dolore impedit, quia eius.",
+      "7th Principle: Absence of errors – fallacy (Quan niệm sai lầm về việc “hết lỗi”)",
+      "-Có thể phần mềm không có lỗi 99% vẫn không sử dụng được. Đây có thể là trường hợp nếu hệ thống được kiểm tra kỹ lưỡng cho các yêu cầu sai. Kiểm thử phần mềm không chỉ đơn thuần là tìm lỗi, mà còn để kiểm tra xem phần mềm có đáp ứng nhu cầu kinh doanh không. Sự vắng mặt của Lỗi là sai lầm, tức là việc tìm và sửa lỗi không giúp ích gì nếu việc xây dựng hệ thống không sử dụng được và không đáp ứng nhu cầu và yêu cầu của người dùng."
+    ],
+    "author": "hienthu",
+    "comments": [
+      {
+        "body": "bài viết hay!!!",
+        "author": "abc123"
+      }
+    ],
+    "likes": 0,
+    "image": "/img/test1.png",
+    "createdOn": 1408547127216
+  },
+  {
+    "title": "Kỹ năng cần thiết để trở thành Tester",
+    "body": [
+      "- Kỹ năng phân tích: Một tester giỏi cần có kỹ năng phân tích nhạy bén. Kỹ năng phân tích sẽ giúp phân chia một hệ thống phần mềm phức tạp thành các đơn vị nhỏ hơn để hiểu sâu hệ thống hơn và tạo ra nhiều trường hợp kiểm thử cho mỗi đơn vị đó.",
+      "- Kỹ năng giao tiếp: Một tester giỏi phải có kỹ năng giao tiếp bằng lời nói và bằng văn bản tốt. Các tài liệu kiểm thử (như test cases, test plans, chiến lược kiểm thử, bug reports…) được tạo bởi tester cần dễ đọc và dễ hiểu. Trao đổi các vấn đề với các developers trong trường hợp có lỗi hoặc bất kỳ vấn đề nào khác sẽ đòi hỏi sự khéo léo và giao tiếp tốt.",
+      "- Kỹ năng tổ chức và quản lý thời gian: Kiểm thử là một công việc đòi hỏi đặc biệt trong suốt quá trình phát triển phần mềm. Tester phải quản lý hiệu quả khối lượng công việc, năng suất làm việc tốt, quản lý thời gian tối ưu và kỹ năng tổ chức tốt",
+      "- Thái độ tốt: Để trở thành một tester giỏi, bạn phải có thái độ tốt. Một thái độ “test to break”, định hướng rõ ràng, sẵn sàng tìm hiểu và đề xuất cải tiến quy trình. Trong ngành công nghiệp phần mềm, công nghệ phát triển với tốc độ nhanh chóng và một tester giỏi cần nâng cấp các kỹ năng technical của mình khi công nghệ thay đổi. Thái độ phản ánh mức độ độc lập, nắm rõ nhiệm vụ được giao và hoàn thành nhiệm vụ mà không cần nhiều sự giám sát, hướng dẫn.",
+      " Đam mê: Trong bất kỳ ngành nghề hay công việc nào, người ta phải có một niềm đam mê nhất định nào đó. Một tester cũng phải có niềm đam mê với lĩnh vực của mình. NHƯNG làm thế nào để xác định được bạn có đam mê kiểm thử phần mềm hay không? Đơn giản là hãy thử, công việc kiểm thử phần mềm là phù hợp với bạn nếu không khiến bạn chuyển sang một công việc khác hay một lĩnh vực khác mà bạn quan tâm."
+    ],
+    "author": "hienthu",
+    "comments": [
+      {
+        "body": "very well",
+        "author": "asdfgh"
+      }
+    ],
+    "likes": 0,
+    "image": "",
+    "createdOn": 1408547127216
+  },
+  {
+    "title": "Quy trình phát triển phần mềm SDLC – Software Development Life Cycle",
+    "body": [
+      "Phát triển phần mềm là một thị trường vô cùng rộng lớn và phức tạp, có rất nhiều quy trình, quy trình khác nhau được các công ty áp dụng để phát triển và phát hành các sản phẩm phần mềm. Việc lựa chọn quy trình thường phụ thuộc vào nhiều yếu tố như nhu cầu kinh doanh, chuyên môn, nhóm phát triển, loại ứng dụng, mục tiêu kinh doanh, khung thời gian phát triển, v.v.",
+      "Quá trình phát triển phần mềm được gọi là SDLC (Software Development Life Cycle). Trong thực tế các công ty xây dựng và phát triển phần mềm tùy theo từng quy mô, hình thức hoạt động mà có thể điều chỉnh gộp tách các giai đoạn tùy theo nhu cầu thực tế của công ty đó. Tuy nhiên để tạo ra một sản phẩm phần mềm sẽ bao gồm các giai đoạn sau:",
+      "     - Pha yêu cầu",
+      "     - Pha đặc tả",
+      "     - Pha thiết kế",
+      "     - Pha lập trình",
+      "     - Pha kiểm thử",
+      "     - Pha triển khai và bảo trì"
+    ],
+    "author": "hienthu",
+    "comments": [
+      {
+        "body": " good!",
+        "author": "hiuhiu"
+      }
+    ],
+    "likes": 0,
+    "image": "/img/test3.png",
+    "createdOn": 1408547127216
+  },
+  {
+    "title": "Agile Scrum Testing",
+    "body": [
+      "Agile Scrum là gì",
+      "Agile trong Tiếng anh được hiểu là nhanh (nhanh hơn cả fast), nó là tập hợp các nguyên lý của các phần mềm linh hoạt và nhanh chóng. Một trong số mô hình phần mềm sử dụng nguyên tắc của Agile phổ biến như hiện nay đó là Scrum.",
+      "4 Nguyên tắc của Aglie"
+    ],
+    "author": "mymy",
+    "comments": [
+      {
+        "body": "well!",
+        "author": "hihi"
+      }
+    ],
+    "likes": 0,
+    "image": "/img/test4.png",
+    "createdOn": 1408547127216
+  },
+  {
+    "title": "Tố chất của 1 Tester chuyên nghiệp.",
+    "body": [
+      "- Tò mò",
+      "Đây là yếu tố đầu tiên trong danh sách. Là một Tester, bạn cần thắc mắc tất cả mọi thứ chưa rõ ràng. Luôn đặt ra câu hỏi, “Click nút Submit 2 lần thì sao? Hoặc 3 lần? Hay nếu sau khi làm click nút Submit thì click nút Escape ngay lập tức? Sẽ ra sao nếu spam comment với chỉ các kí tự trắng?” Nếu bạn là một Tester dày dạn, tôi khá chắc rằng bạn đã quen thuộc với cách tư duy này. Nếu chưa, tôi khuyên bạn nên làm điều này. Nếu bạn không đặt ra các câu hỏi, khách hàng sẽ đặt ra. Nếu bạn không đưa ra đủ các Test Case, khách hàng sẽ đưa ra. Tóm lại: Không bao giờ “chắc là”. Luôn tò mò. Luôn hỏi. Luôn tìm kiếm.",
+      "- Kiên trì, cẩn thận, tỉ mỉ",
+      "Kiên trì là một trong những tố chất ở người Tester. Những chuyên viên kiểm thử mang trong mình tố chất này sẽ rất cố gắng kiên trì, nhẫn nại và không bỏ cuộc đến khi khắc phục được lỗi phần mềm. Có rất nhiều bất ngờ, sự cố trong khi test, lúc này đây người Tester sẽ nhẫn nại thử nhiều trường hợp cho đến khi hiểu rõ được nguyên nhân, các bước thao tác dẫn đến lỗi. Để nâng cao chất lượng kiểm thử sản phẩm đến mức tối ưu, thì người Tester sẽ không thể bỏ qua từng dấu chấm dấu phẩy, icon, logo và hàng số thứ nhỏ nhặt khác. Là một chuyên viên kiểm thử xuất sắc thì sẽ không bao giờ chịu từ bỏ mà kiên trì phát hiện ra lỗi, rồi tỉ mỉ kiểm tra lại phần mềm, không ngừng cải tiến và khắc phục một cách tích cực và nhanh chóng.",
+      "- Kỹ năng giao tiếp tốt",
+      "Không ai cảm thấy thích khi bị vạch ra những lỗi sai. Vậy nên một Tester cần phải trao dồi cho mình kỹ năng mềm. Để giải quyết và giao tiếp với người xung quanh một cách tích cực. Nhất là mối quan hệ Tester – Developer vốn không được êm đẹp. Là một Tester bạn sẽ gặp rất nhiều phản ứng khi đưa ra ý kiến chủ quan. Tuy nhiên, hãy đưa ra nhận định và chỉ ra những lỗi sai cần khắc phục khách quan hơn. Hãy nói như thế nào để các lập trình  viên không cảm thấy khó chịu. Cũng như đưa ra cho họ một cách giải quyết tốt nhất.",
+      "- Tư duy Logic",
+      "Nếu bạn nghĩ testing chỉ đơn thuần là chuyển đổi từ requirement sang test case thì bạn sai rồi! Sai! Tất cả các bước từ thảo luận về Requirement, thảo luận về Features, xác định Test Strategy, xây dựng Test, Debug, tái hiện bug đều được hưởng lợi từ tư duy logic.",
+      "- Trình độ về Tiếng Anh",
+      "Ngày nay, ngoại ngữ đã là một trong những yếu tố quan trọng phục vụ cho công việc của chúng ta. Vậy nên, với ngành CNTT thì tiếng Anh là rất thiết. Bạn có phải là Tester giỏi hay không còn tùy thuộc vào trình độ tiếng Anh của mình. Có thể đọc hiểu, viết được các tài liệu chuyên ngành. Công nghệ luôn gắn liền với tiếng Anh vì thế biết tiếng Anh là điều quan trọng để đáp ứng được nhu cầu công việc.",
+      "- Cân bằng",
+      "Khả năng cân bằng trong công việc là rất quan trọng. Tester cần biết cân bằng giữa ham muốn đào sâu vấn đề, yêu cầu cơ bản và yêu cầu nâng cao so với deadline hoàn thành công việc. Có nhiều bạn tester do quá tập trung việc nghiên cứu tài liệu, sửa lỗi hay tìm bug mà quên deadline của task, quên kiểm tra email, quên thư giãn, v.v. Cân bằng tốt sẽ giúp chúng ta cảm thấy thoải mái và làm việc hiệu quả và bền vững hơn."
+       ],
+    "author": "hienthu",
+    "comments": [
+      {
+        "body": "bài viết hay!!!",
+        "author": "abc123"
+      }
+    ],
+    "likes": 0,
+    "image": "",
+    "createdOn": 1408547127216
+  }
+]

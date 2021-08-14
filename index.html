@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="./boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <div id="wp-container">
+        <div id="menu">
+            <div id="nav" class="nav">
+                <a href="index.html" class="nav-item ">HOME</a>
+                <a href="project.html" class="nav-item">DỰ ÁN</a>
+                <a href="about.html" class="nav-item">ABOUT ME</a>
+            </div>
+            <div id="info">
+                <a class="social" href="https://www.facebook.com/profile.php?id=100033971644646" target="_blank">
+                    <li><i class="fab fa-facebook-square"></i></li>
+                </a>
+                <a class="social" href="https://www.instagram.com/_glenda.bth67_/" target="_blank">
+                    <li><i class="fab fa-instagram"></i></li>
+                </a>
+                <a class="social" href="https://www.linkedin.com/in/bui-hien-13b39b191/" target="_blank">
+                    <li><i class="fab fa-linkedin"></i></li>
+                </a>
+                <a class="social" href="https://github.com/hienthu67" target="_blank">
+                    <li><i class="fab fa-github-square"></i></li>
+                </a>
+
+            </div>
+        </div>
+
+        <div id="wp-content">
+
+            <div id="intro">
+                <img src="./img/sign.png" alt="">
+            </div>
+            <div id="img-intro">
+                <div class="image-home"><img src="./img/img-intro-fe.png" alt=""></div>
+                <div class="image-home"><img src="./img/img-intro-test.png" alt=""></div>
+                <div class="image-home"><img src="./img/img-intro-content.png" alt=""></div>
+            </div>
+            <div id="wp-content-sidebar">
+                <div id="content">
+                    <div ng-app="personalBlog">
+                        <div ng-controller="BlogHienThu as blog">
+                            <div class="topbar">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-s-4">
+                                            <h1 ng-click="blog.selectTab('blog')" class="push-left">{{blog.title}}</h1>
+                                        </div>
+                                        <div class="offset-s-4 col-s-4">
+                                            <nav role='navigation' class="push-right">
+                                                <ul>
+                                                    <li><a href="#" ng-click="blog.selectTab('blog')">Toàn bộ bài
+                                                            viết</a></li>
+                                                    |
+                                                    <li><a href="#" ng-click="blog.selectTab('new')">Thêm bài viết
+                                                            mới</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="container">
+                                    <div class="row">
+                                        <ul class="post-grid" ng-show="blog.isSelected('blog')">
+                                            <li ng-repeat="post in blog.posts" class="col-s-4"
+                                                ng-class="{ 'reset-s' : $index%3==0 }"
+                                                ng-click="blog.selectTab($index)">
+                                                <h3>{{post.title}}</h3>
+                                                <p>{{post.body[0] | limitTo:70}}...</p>
+                                                <p class="fa fa-comment push-left"> {{post.comments.length}}
+                                                </p>
+                                                <span>bình luận</span>
+                                                <p class="fa fa-heart push-right"> {{post.likes}}
+                                                </p>
+                                                <span>like</span>
+                                            </li>
+                                        </ul>
+                                        <div class="post" ng-repeat="post in blog.posts"
+                                            ng-show="blog.isSelected($index)">
+                                            <div>
+
+                                                <h2>{{post.title}}</h2>
+                                                <cite>tạo bởi {{post.author}} vào lúc {{post.createdOn | date}}</cite>
+                                                <img src="{{post.image}}" ng-show="{{post.image}}" />
+
+                                                <div class="post-body">
+                                                    <p ng-repeat="paragraph in post.body">
+                                                        {{paragraph}}
+                                                    </p>
+                                                </div>
+
+                                                <div class="comments" ng-controller="CommentBlog as commentBlog">
+                                                    <button class="fa fa-heart" ng-click="post.likes = post.likes+1">
+                                                        {{post.likes}}</button>
+                                                    <h3>Bình luận</h3>
+                                                    <ul>
+                                                        <li ng-repeat="comment in post.comments">
+                                                            "{{comment.body}}"
+                                                            <cite>- <b>{{comment.author}}</b></cite>
+                                                        </li>
+                                                    </ul>
+                                                    <form name="commentForm"
+                                                        ng-submit="commentForm.$valid && commentBlog.addComment(post)"
+                                                        novalidate>
+
+
+                                                        <h4>Thêm nhận xét</h4>
+                                                        <textarea ng-model="commentBlog.comment.body" cols="30"
+                                                            rows="10" required></textarea>
+                                                        <label for="">bởi:</label>
+                                                        <input type="text" ng-model="commentBlog.comment.author"
+                                                            required placeholder="Tên của bạn" />
+
+                                                        <input type="submit" value="Submit" />
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post" ng-show="blog.isSelected('new')">
+                                            <h2>Thêm bài viết mới</h2>
+
+                                            <form name="postForm" ng-submit=" blog.addPost()" novalidate>
+                                                <h4>Tiêu đề</h4>
+                                                <input type="text" ng-model="blog.post.title" />
+                                                <h4>Nội dung</h4>
+                                                <textarea ng-model="blog.post.body" ng-list="/\n/" rows="10"></textarea>
+                                                <label for="">Ảnh (URL)</label>
+                                                <input type="text" ng-model="blog.post.image" />
+                                                <label for="">by:</label>
+                                                <input type="text" ng-model="blog.post.author" placeholder="Tên của bạn"
+                                                    required />
+
+                                                <input type="submit" value="Bình luận" />
+                                                </select>
+                                            </form>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="line"></div>
+                <div id="sidebar">
+                    <div id="contact-info">
+                        <h3>Liên hệ: </h3>
+                        <ul>
+                            <li>Instagram: <a
+                                    href="https://www.instagram.com/imhiroche/">https://www.instagram.com/imhiroche/</a>
+                            </li>
+                            <li>Facebook: <a
+                                    href="https://www.facebook.com/profile.php?id=100033971644646">https://www.facebook.com/profile.php?id=100033971644646</a>
+                            </li>
+                            <li>Github: <a href="https://github.com/hienthu67">https://github.com/hienthu67</a></li>
+                        </ul>
+                    </div>
+                    <div id="random">
+                        <button id="ran">Câu nói hay </button>
+                        <div id="quotes"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+
+            <!--  -->
+
+        </div>
+
+    </div>
+
+    <script>
+        let btn = document.getElementById('ran');
+        let quotes = document.getElementById('quotes');
+        let s = [
+            'Cuộc sống không bao giờ là bế tắc thực sự hay có khái niệm mất tất cả một khi bạn còn có niềm tin',
+            'Chúng tôi sẽ làm tất cả để thành công. Đơn giản bởi chúng tôi là những người trẻ và chúng tôi không bao giờ biết từ bỏ.',
+            'Khi mọi thứ dường như chống lại bạn. Hãy nhớ rằng máy bay chỉ có thể cất cánh khi chống lại gió, không phải thuận theo nó.',
+            'Hãy cảm ơn những lúc bạn gặp khó khăn, bởi nếu không có khó khăn, bạn sẽ không có cơ hội để hiểu mình và trải nghiệm cuộc sống.',
+            'Muốn cầu tiến hơn người, ra đời phải biết ngước mặt nhìn lên. Vì nhìn xuống ta thấy hơn người, nhưng nhìn lên ta chỉ là con số không vĩ đại.',
+            'Cuộc sống dầy ắp những việc không như ý muốn, muốn tránh cũng không được. Giải pháp tốt nhất là suy nghĩ tích cực về nó.',
+            'Tôi có thể chấp nhận thất bại, mọi người đều thất bại ở một việc gì đó. Nhưng tôi không chấp nhận việc không cố gắng.',
+            'Trở ngại không thể cản bạn lại được. Nếu bạn va phải tường, đừng quay đi và bỏ cuộc. Hãy tìm cách trèo lên, phá vỡ hay bước vòng qua nó.',
+            'Đừng cầu xin cho một cuộc sống dễ dàng, Hãy cầu cho có sức mạnh để chịu đựng một cuộc sống khó khăn.',
+            'Con người sinh ra không phải để tan biến đi như một hạt cát vô danh. Họ sinh ra để in dấu lại trên mặt đất, in dấu lại trong trái tim người khác.',
+
+        ];
+        btn.addEventListener('click', function () {
+            var random = s[Math.floor(Math.random() * s.length)];
+            quotes.innerHTML = random;
+        });
+    </script>
+
+    <script src='./js/angular.min.js'></script>
+    <script src='./js/angular-animate.js'></script>
+    <script src='./js/jquery-3.4.1.min.js'></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
